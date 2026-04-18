@@ -37,7 +37,7 @@ A running MySQL/PostgreSQL instance with the Sakila database installed.
 Clone the repository:
 
 Bash
-git clone https://github.com/your-username/sakila-analytics-dashboard.git
+git clone https://github.com/Fasih-ulislam/sakila-analytics-dashboard.git
 cd sakila-analytics-dashboard
 Install dependencies:
 
