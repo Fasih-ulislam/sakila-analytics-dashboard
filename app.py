@@ -1,12 +1,23 @@
+import os
 import streamlit as st
 import pandas as pd
 import plotly.express as px
 from sqlalchemy import create_engine
+from dotenv import load_dotenv
 
-# Construct the SQLAlchemy connection string
-DATABASE_URL = f"postgresql://postgres.vmuxhpshnbrexcjuogyg:0828Fasih2006@aws-1-ap-southeast-2.pooler.supabase.com:6543/postgres"
+# ---------------------------
+# Load environment variables
+# ---------------------------
+load_dotenv()  # this will read .env file in your project root
 
-# Create the SQLAlchemy engine
+DATABASE_URL = os.getenv("DATABASE_URL")
+
+if not DATABASE_URL:
+    raise ValueError("DATABASE_URL is not set in .env file")
+
+# ---------------------------
+# Database Connection
+# ---------------------------
 engine = create_engine(
     DATABASE_URL,
     pool_size=5,
@@ -14,7 +25,6 @@ engine = create_engine(
     pool_timeout=30,
     pool_recycle=1800,  # recycle every 30 min
 )
-
 
 try:
     with engine.connect() as connection:
@@ -29,7 +39,6 @@ st.set_page_config(page_title="Sakila Analytics Dashboard", layout="wide")
 
 st.title("🎬 Sakila Film Analytics Dashboard")
 st.markdown("Interactive insights into films, ratings, and rental trends")
-
 
 @st.cache_data
 def load_data():
