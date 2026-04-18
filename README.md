@@ -63,6 +63,6 @@ pool_recycle: 1800 seconds (prevents stale connections)
 👤 Author
 Your Name
 
-LinkedIn: [your-profile](https://www.linkedin.com/in/muhammad-fasih-cs/)
+LinkedIn: [muhammad-fasih-cs](https://www.linkedin.com/in/muhammad-fasih-cs/)
 
 GitHub: [Fasih-ulsilam](https://github.com/Fasih-ulislam)
