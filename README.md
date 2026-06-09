@@ -61,7 +61,7 @@ pool_recycle: 1800 seconds (prevents stale connections)
 @st.cache_data: Implemented to reduce database load by caching heavy queries.
 
 👤 Author
-Your Name
+Muhammad Fasih Ul Islam
 
 LinkedIn: [muhammad-fasih-cs](https://www.linkedin.com/in/muhammad-fasih-cs/)
 
